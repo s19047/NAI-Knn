@@ -71,13 +71,13 @@ public class Gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        trainBtn = new javax.swing.JButton();
         msgLbl = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
         kField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        helpBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         paramField = new javax.swing.JTextField();
         resultLbl = new javax.swing.JLabel();
@@ -95,10 +95,10 @@ public class Gui extends javax.swing.JFrame {
         setTitle("s19047- Ahmad Alaziz");
         setBackground(new java.awt.Color(102, 102, 102));
 
-        jButton1.setText("read training file");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        trainBtn.setText("read training file");
+        trainBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                trainBtnActionPerformed(evt);
             }
         });
 
@@ -114,11 +114,10 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel1.setText("K:");
 
-        jButton2.setActionCommand("");
-        jButton2.setLabel("How to use!");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        helpBtn.setLabel("How to use!");
+        helpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                helpBtnActionPerformed(evt);
             }
         });
 
@@ -183,11 +182,11 @@ public class Gui extends javax.swing.JFrame {
                         .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(trainBtn)
                         .addGap(34, 34, 34)
                         .addComponent(msgLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(helpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33))
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
@@ -227,9 +226,9 @@ public class Gui extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
+                    .addComponent(helpBtn)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton1)
+                        .addComponent(trainBtn)
                         .addComponent(msgLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -275,7 +274,7 @@ public class Gui extends javax.swing.JFrame {
             
         }
     }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void trainBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trainBtnActionPerformed
       
         int returnVal = openFileChooser.showOpenDialog(this);
         
@@ -365,13 +364,13 @@ public class Gui extends javax.swing.JFrame {
        
         //CloseFile Reader
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_trainBtnActionPerformed
 
     private void kFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_kFieldActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void helpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpBtnActionPerformed
           JOptionPane.showMessageDialog(this, "If you want the algorithm to "
                   + "predict a result for you , Please make sure "
                   + "you have already  trained it , using the read training file"
@@ -381,7 +380,7 @@ public class Gui extends javax.swing.JFrame {
                   + "then press predict.  If you want to test the algorithm "
                   + "with your \n" + "own dataset , first enter K then press the test button ( make "
                   + "sure the algorithm has been trained already ) ");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_helpBtnActionPerformed
 
     private void paramFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paramFieldActionPerformed
         // TODO add your handling code here:
@@ -696,9 +695,8 @@ public class Gui extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accuracyLbl;
+    private javax.swing.JButton helpBtn;
     private javax.swing.JButton inputTestBtn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -714,5 +712,6 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JButton predictBtn;
     private javax.swing.JLabel resultLbl;
     private javax.swing.JTextArea textArea;
+    private javax.swing.JButton trainBtn;
     // End of variables declaration//GEN-END:variables
 }
